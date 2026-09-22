@@ -1,0 +1,28 @@
+{
+  "name": "rino-language-support",
+  "displayName": "Rino Language Support",
+  "description": "دعم لغة Rino العربية لبناء الويب",
+  "version": "0.1.0",
+  "publisher": "rino-lang",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "rino",
+        "aliases": ["Rino", "rino"],
+        "extensions": [".rino"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "rino",
+        "scopeName": "source.rino",
+        "path": "./syntaxes/rino.tmLanguage.json"
+      }
+    ]
+  }
+}
