@@ -1,13 +1,17 @@
 {
   "name": "rino-language-support",
   "displayName": "Rino Language Support",
-  "description": "دعم لغة Rino العربية لبناء الويب",
-  "version": "0.1.0",
+  "description": "دعم لغة Rino العربية لبناء الويب — تلوين وإكمال تلقائي",
+  "version": "0.2.0",
   "publisher": "rino-lang",
   "engines": {
     "vscode": "^1.75.0"
   },
   "categories": ["Programming Languages"],
+  "activationEvents": [
+    "onLanguage:rino"
+  ],
+  "main": "./extension.js",
   "contributes": {
     "languages": [
       {

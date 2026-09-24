@@ -2,32 +2,109 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Rino",
   "patterns": [
-    { "include": "#keywords" },
+    { "include": "#comments" },
     { "include": "#strings" },
     { "include": "#numbers" },
-    { "include": "#comments" }
+    { "include": "#events" },
+    { "include": "#sections" },
+    { "include": "#elements" },
+    { "include": "#keywords" },
+    { "include": "#functions" },
+    { "include": "#operators" },
+    { "include": "#punctuation" }
   ],
   "repository": {
-    "keywords": {
+    "comments": {
       "patterns": [
         {
-          "name": "keyword.control.rino",
-          "match": "\\b(صفحة|نمط|حالة|جسم|منطق|دع|ثابت|دالة|أرجع|إذا|وإلا|لكل|في|و|أو|ليس|صحيح|خطأ|لا_شيء|إعدادات|تصحيح|عنوان|فقرة|زر|صورة|رابط|مدخل|قائمة|عنصر_قائمة|اطبع|عند_الضغط|عند_التغيير)\\b"
+          "name": "comment.line.double-slash.rino",
+          "match": "//.*$"
         }
       ]
     },
     "strings": {
-      "name": "string.quoted.double.rino",
-      "begin": "\"",
-      "end": "\""
+      "patterns": [
+        {
+          "name": "string.quoted.double.rino",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            { "name": "constant.character.escape.rino", "match": "\\\\." }
+          ]
+        }
+      ]
     },
     "numbers": {
-      "name": "constant.numeric.rino",
-      "match": "\\b\\d+(\\.\\d+)?\\b"
+      "patterns": [
+        {
+          "name": "constant.numeric.rino",
+          "match": "\\b\\d+(\\.\\d+)?\\b"
+        }
+      ]
     },
-    "comments": {
-      "name": "comment.line.double-slash.rino",
-      "match": "//.*$"
+    "events": {
+      "patterns": [
+        {
+          "name": "keyword.other.event.rino",
+          "match": "\\b(عند_الضغط|عند_التغيير|عند_الإدخال)\\b"
+        }
+      ]
+    },
+    "sections": {
+      "patterns": [
+        {
+          "name": "keyword.control.section.rino",
+          "match": "\\b(صفحة|نمط|حالة|جسم|منطق|إعدادات|تصحيح)\\b"
+        }
+      ]
+    },
+    "elements": {
+      "patterns": [
+        {
+          "name": "entity.name.tag.rino",
+          "match": "\\b(عنوان|فقرة|زر|صورة|رابط|مدخل|قائمة|عنصر_قائمة|جدول|صف|خلية|قسم|رأس|تذييل)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.rino",
+          "match": "\\b(دع|ثابت|دالة|أرجع|إذا|وإلا|لكل|في|من|إلى|بينما|أوقف|تابع)\\b"
+        },
+        {
+          "name": "constant.language.rino",
+          "match": "\\b(صحيح|خطأ|لا_شيء)\\b"
+        },
+        {
+          "name": "keyword.operator.logical.rino",
+          "match": "\\b(و|أو|ليس)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.rino",
+          "match": "\\b(اطبع|طول|كبير|صغير|يحتوي|استبدل|اقرأ|احفظ|جذر|قوة|قوس|عشوائي|اجلب)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.rino",
+          "match": "(==|!=|>=|<=|>|<|=|\\+|-|\\*|/|%)"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "punctuation.separator.rino",
+          "match": "[(){}\\[\\],:]"
+        }
+      ]
     }
   },
   "scopeName": "source.rino"
