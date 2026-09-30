@@ -1,0 +1,16 @@
+{
+  "iconDefinitions": {
+    "_rino_file": {
+      "iconPath": "./rino-file.svg"
+    }
+  },
+  "fileExtensions": {
+    "rino": "_rino_file"
+  },
+  "fileNames": {
+    "index.rino": "_rino_file"
+  },
+  "languageIds": {
+    "rino": "_rino_file"
+  }
+}

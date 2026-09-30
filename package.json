@@ -1,13 +1,14 @@
 {
   "name": "rino-language-support",
   "displayName": "Rino Language Support",
-  "description": "دعم لغة Rino العربية لبناء الويب — تلوين وإكمال تلقائي",
-  "version": "0.2.0",
+  "description": "دعم لغة Rino العربية لبناء الويب — تلوين وإكمال تلقائي وأيقونات",
+  "icon": "icon.png",
+  "version": "0.3.0",
   "publisher": "rino-lang",
   "engines": {
     "vscode": "^1.75.0"
   },
-  "categories": ["Programming Languages"],
+  "categories": ["Programming Languages", "Themes"],
   "activationEvents": [
     "onLanguage:rino"
   ],
@@ -26,6 +27,13 @@
         "language": "rino",
         "scopeName": "source.rino",
         "path": "./syntaxes/rino.tmLanguage.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "rino-icons",
+        "label": "Rino Icons",
+        "path": "./icons/icon-theme.json"
       }
     ]
   }

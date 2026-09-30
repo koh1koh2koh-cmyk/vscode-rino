@@ -1,0 +1,168 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- خلفية داكنة -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    
+    <!-- ذهبي الدرع -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="30%" stop-color="#fbbf24"/>
+      <stop offset="70%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    
+    <!-- توهج ذهبي -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- بنفسجي للتوهج الداخلي -->
+    <radialGradient id="purpleGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4c1d95" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- خلفية -->
+  <rect width="256" height="256" rx="32" fill="url(#bg)"/>
+  
+  <!-- توهج خلفي -->
+  <circle cx="128" cy="120" r="110" fill="url(#glow)"/>
+  
+  <!-- ===== الدرع (شكل الترسانة) ===== -->
+  
+  <!-- الحد الذهبي الخارجي -->
+  <path d="M 128 12
+           L 230 48
+           L 230 130
+           Q 230 195 128 248
+           Q 26 195 26 130
+           L 26 48
+           Z" 
+        fill="url(#gold)" 
+        stroke="#451a03" 
+        stroke-width="3"/>
+  
+  <!-- الخلفية الداخلية -->
+  <path d="M 128 28
+           L 215 60
+           L 215 128
+           Q 215 185 128 232
+           Q 41 185 41 128
+           L 41 60
+           Z" 
+        fill="#0a0e27"/>
+  
+  <!-- توهج بنفسجي داخلي -->
+  <ellipse cx="128" cy="120" rx="85" ry="95" fill="url(#purpleGlow)"/>
+  
+  <!-- خط ذهبي داخلي مزخرف -->
+  <path d="M 128 42
+           L 200 68
+           L 200 126
+           Q 200 175 128 220
+           Q 56 175 56 126
+           L 56 68
+           Z" 
+        fill="none" 
+        stroke="url(#gold)" 
+        stroke-width="1.5" 
+        opacity="0.6"/>
+  
+  <!-- ===== الأقواس المتصالبة (مثل السيفين) ===== -->
+  
+  <!-- القوس الأيسر { -->
+  <path d="M 75 75
+           Q 60 75 60 95
+           L 60 115
+           Q 60 125 52 130
+           Q 60 135 60 145
+           L 60 165
+           Q 60 185 75 185
+           L 78 182
+           Q 68 182 68 165
+           L 68 145
+           Q 68 132 60 130
+           Q 68 128 68 115
+           L 68 95
+           Q 68 78 78 78
+           Z" 
+        fill="url(#gold)" 
+        stroke="#451a03" 
+        stroke-width="1.5"/>
+  
+  <!-- القوس الأيمن } -->
+  <path d="M 181 75
+           Q 196 75 196 95
+           L 196 115
+           Q 196 125 204 130
+           Q 196 135 196 145
+           L 196 165
+           Q 196 185 181 185
+           L 178 182
+           Q 188 182 188 165
+           L 188 145
+           Q 188 132 196 130
+           Q 188 128 188 115
+           L 188 95
+           Q 188 78 178 78
+           Z" 
+        fill="url(#gold)" 
+        stroke="#451a03" 
+        stroke-width="1.5"/>
+  
+  <!-- ===== حرف "ر" في المركز (ذهبي كبير) ===== -->
+  
+  <text x="128" y="155" 
+        font-family="'Traditional Arabic', 'Arial', sans-serif" 
+        font-size="90" 
+        font-weight="900" 
+        fill="url(#gold)" 
+        stroke="#451a03"
+        stroke-width="1"
+        text-anchor="middle"
+        direction="rtl">ر</text>
+  
+  <!-- ===== سطر كود Rino (صغير في الأسفل) ===== -->
+  
+  <!-- خلفية السطر -->
+  <rect x="58" y="175" width="140" height="30" rx="6" fill="#1e293b" opacity="0.9" stroke="url(#gold)" stroke-width="1"/>
+  
+  <!-- سطر الكود -->
+  <text x="128" y="196" 
+        font-family="'Consolas', 'Courier New', monospace" 
+        font-size="14" 
+        font-weight="bold"
+        fill="#a78bfa" 
+        text-anchor="middle"
+        direction="ltr">صفحة("Rino")</text>
+  
+  <!-- ===== نقاط البيانات (تزيين) ===== -->
+  
+  <!-- نجمة أعلى اليسار -->
+  <circle cx="45" cy="45" r="3" fill="#fbbf24"/>
+  <circle cx="45" cy="45" r="1.5" fill="#fef3c7"/>
+  
+  <!-- نجمة أعلى اليمين -->
+  <circle cx="211" cy="45" r="3" fill="#fbbf24"/>
+  <circle cx="211" cy="45" r="1.5" fill="#fef3c7"/>
+  
+  <!-- نجمة أسفل اليسار -->
+  <circle cx="50" cy="215" r="2.5" fill="#fbbf24"/>
+  
+  <!-- نجمة أسفل اليمين -->
+  <circle cx="206" cy="215" r="2.5" fill="#fbbf24"/>
+  
+  <!-- ===== خط سفلي مزخرف ===== -->
+  
+  <path d="M 80 240 Q 128 248 176 240" 
+        fill="none" 
+        stroke="url(#gold)" 
+        stroke-width="2" 
+        opacity="0.7"/>
+  
+</svg>
